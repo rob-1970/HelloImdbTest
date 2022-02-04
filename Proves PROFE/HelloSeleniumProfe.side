@@ -1,0 +1,97 @@
+{
+  "id": "d049e8a5-ba96-457f-8bf7-ab3ee6c6a51e",
+  "version": "2.0",
+  "name": "HelloSelenium",
+  "url": "https://www.imdb.com/",
+  "tests": [{
+    "id": "c4b69631-b1f2-473b-a16b-8ccbd9e08994",
+    "name": "HelloImdb",
+    "commands": [{
+      "id": "e65fc773-bcaa-4e88-966c-604b69e1a711",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cf20abf-2cf9-4187-aef8-e0ad268d296a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x859",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05754e0c-4ded-433a-962d-9d7de392d6b4",
+      "comment": "",
+      "command": "type",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "el juego del calamar"
+    }, {
+      "id": "389cab6d-df59-4ffb-b8ee-ea80d8afcf7d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72c9c8fc-b03a-4eff-bff5-97c40d29f1d4",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "dcc55916-0275-4a9b-8fb7-5b5c2812b360",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Squid Game",
+      "targets": [
+        ["linkText=Squid Game", "linkText"],
+        ["css=.findResult:nth-child(1) > .result_text > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Squid Game')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div[2]/table/tbody/tr/td[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/title/tt10919420/?ref_=fn_al_tt_1')])[2]", "xpath:href"],
+        ["xpath=//td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Squid Game')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b64ba7c-f894-4eda-9914-eac9ccc4f633",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//h1",
+      "targets": [
+        ["css=.TitleHeader__TitleText-sc-1wu6n3d-0", "css:finder"],
+        ["xpath=//div[@id='__next']/main/div/section/section/div[3]/section/section/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Squid Game')]", "xpath:innerText"]
+      ],
+      "value": "Squid Game"
+    }]
+  }],
+  "suites": [{
+    "id": "1912f447-9121-4524-afad-653c8763fc8f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c4b69631-b1f2-473b-a16b-8ccbd9e08994"]
+  }],
+  "urls": ["https://www.google.com/", "https://www.imdb.com/"],
+  "plugins": []
+}

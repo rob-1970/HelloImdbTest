@@ -1,0 +1,158 @@
+{
+  "id": "b3427783-7881-49aa-8ed6-07f4d4149b3a",
+  "version": "2.0",
+  "name": "HelloSelenium",
+  "url": "http://google.com/",
+  "tests": [{
+    "id": "7a74b972-5e87-437a-bad0-5f7839256276",
+    "name": "HelloGoogle",
+    "commands": [{
+      "id": "d0409de5-d417-44e9-a3e4-f02ab3fafe9b",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "277111f0-a583-47b7-a7d5-75a42cf2a7db",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1587x829",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "524430d7-11ad-40d3-9515-ba39a04a911a",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66bacfae-2313-439f-bf8c-16b7baf1dc3a",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "El huego de En"
+    }, {
+      "id": "f3bfa7f4-b0db-426a-9fb5-316139b9db58",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "ab770c55-3f98-4f05-ab5d-c7e61edeaa4c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.RzdJxc:nth-child(1) .fc9yUc:nth-child(1)",
+      "targets": [
+        ["css=.RzdJxc:nth-child(1) .fc9yUc:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='rso']/div[2]/div/div[2]/div[2]/div/div/div/div/div/a/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c0370a1-1e5b-4c4a-8114-945e2054f6e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ytp-play-button",
+      "targets": [
+        ["css=.ytp-play-button", "css:finder"],
+        ["xpath=//div[@id='movie_player']/div[27]/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9de58a98-be69-4d81-8c7a-9e215227a07c",
+      "comment": "",
+      "command": "//close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d60c6c49-b2ff-4cb2-a7f4-581c0e64e40f",
+    "name": "HelloPelis-IMDB",
+    "commands": [{
+      "id": "c6d1c2dd-2ba3-4eb9-b22f-41c3370cdda1",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e47e55ef-05af-45e4-94fc-dd0feb33da73",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1649x891",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4a51ca0-0cab-4db5-acfa-aaacf9e97da8",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div/div/div/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "no mires"
+    }, {
+      "id": "d181661d-90db-40a4-a3d8-0adaca7b75ac",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "295f4c29-40cd-4935-aeff-2736c9f8888b",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=suggestion-search",
+      "targets": [],
+      "value": "$(KEY_ENTER)"
+    }, {
+      "id": "94c812d8-831d-49a3-8ed0-b1c4b831c6fe",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Don't Look Down",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7de288bb-d3c1-4491-ac99-6691c35f013d",
+      "comment": "",
+      "command": "//close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "94e77853-9065-459e-b5ab-cf94684698c3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7a74b972-5e87-437a-bad0-5f7839256276"]
+  }],
+  "urls": ["http://google.com/"],
+  "plugins": []
+}
