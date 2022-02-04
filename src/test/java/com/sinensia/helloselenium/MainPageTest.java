@@ -31,7 +31,7 @@ public class MainPageTest {
         driver.quit();
     }
 
-    @Test
+/*    @Test
     public void search() {
         mainPage.searchButton.click();
 
@@ -43,9 +43,9 @@ public class MainPageTest {
 
         WebElement searchPageField = driver.findElement(By.cssSelector("input[data-test='search-input']"));
         assertEquals("Selenium", searchPageField.getAttribute("value"));
-    }
+    }*/
 
-    @Test
+/*    @Test
     public void toolsMenu() {
         new Actions(driver)
                 .moveToElement(mainPage.toolsMenu)
@@ -53,7 +53,7 @@ public class MainPageTest {
 
         WebElement menuPopup = driver.findElement(By.cssSelector("div[data-test='menu-main-popup-content']"));
         assertTrue(menuPopup.isDisplayed());
-    }
+    }*/
 
     @Test
     public void navigationToAllTools() {
