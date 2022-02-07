@@ -55,7 +55,7 @@ public class HelloFirefoxlmdbTest {        // Manualment s'ha de fer @TestInstan
         we = new WebDriverWait(driver, 15)
                 .until(ExpectedConditions.elementToBeClickable(By.linkText("Squid Game")));
         we.click();
-        // 6.1 ==>> INTRODUCIR una PAUSA para esperar la carga de la pagina
+        // 6.1 ==>> INTRODUCIR una PAUSA para esperar la carga de la pagina, INICIALMENT una cosa ...
         //WebElement we = new WebDriverWait(driver, 15)
 /*        we = new WebDriverWait(driver, 15)
                 .until(ExpectedConditions.elementToBeClickable(By.linkText("Trivia")));*/
