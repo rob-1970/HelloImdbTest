@@ -62,7 +62,9 @@ public class HelloFirefoxlmdbTest {        // Manualment s'ha de fer @TestInstan
         we = new WebDriverWait(driver, 15)
                 .until(ExpectedConditions.elementToBeClickable(By.linkText("User reviews")));
         // 7 | assertText | xpath=//h1 | Squid Game
-        assertThat(driver.findElement(By.xpath("//h1")).getText(), is("Squid Game ERROR"));
-        // assertThat(driver.findElement(By.xpath("//h1")).getText(), is("Squid Game"));
+        // REALIZAR el TEST para FORZAR que de ERROR
+        // assertThat(driver.findElement(By.xpath("//h1")).getText(), is("Squid Game ERROR"));
+        // REALIZAR el TEST para ver si da ERROR
+        assertThat(driver.findElement(By.xpath("//h1")).getText(), is("Squid Game"));
     }
 }
