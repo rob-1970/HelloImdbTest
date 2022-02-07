@@ -50,11 +50,17 @@ public class HelloFirefoxlmdbTest {        // Manualment s'ha de fer @TestInstan
         // 5 | sendKeys | id=suggestion-search | ${KEY_ENTER}
         driver.findElement(By.id("suggestion-search")).sendKeys(Keys.ENTER);
         // 6 | click | linkText=Squid Game |
-        driver.findElement(By.linkText("Squid Game")).click();
+        //driver.findElement(By.linkText("Squid Game")).click();
+        // wait until the "Squid Game" link is ready to be clicked
+        we = new WebDriverWait(driver, 15)
+                .until(ExpectedConditions.elementToBeClickable(By.linkText("Squid Game")));
+        we.click();
         // 6.1 ==>> INTRODUCIR una PAUSA para esperar la carga de la pagina
         //WebElement we = new WebDriverWait(driver, 15)
+/*        we = new WebDriverWait(driver, 15)
+                .until(ExpectedConditions.elementToBeClickable(By.linkText("Trivia")));*/
         we = new WebDriverWait(driver, 15)
-                .until(ExpectedConditions.elementToBeClickable(By.linkText("Trivia")));
+                .until(ExpectedConditions.elementToBeClickable(By.linkText("User reviews")));
         // 7 | assertText | xpath=//h1 | Squid Game
         assertThat(driver.findElement(By.xpath("//h1")).getText(), is("Squid Game ERROR"));
         // assertThat(driver.findElement(By.xpath("//h1")).getText(), is("Squid Game"));
